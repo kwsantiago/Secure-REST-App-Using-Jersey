@@ -1,4 +1,4 @@
 # Secure REST Application Using Jersey
 
 ##
-Using this [guide](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-started-tutorial-fullstack-web-app), I built a secure REST Application Using Jersey. 
+Using this [guide](https://developer.okta.com/blog/2019/12/30/java-jersey-jaxrs), I built a secure REST Application Using Jersey. 
