@@ -43,4 +43,11 @@ public class TaskResource {
         // return 204
         return Response.noContent().build();
     }
+
+    @DELETE 
+    @Path("/{taskId}")
+    public Response deleteTask(@PathParam("taskId") UUID taskId) { 
+        tasks.remove(taskId);
+        return Response.noContent().build();
+    }
 }
