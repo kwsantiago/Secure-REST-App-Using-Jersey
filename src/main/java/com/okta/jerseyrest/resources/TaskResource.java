@@ -28,4 +28,19 @@ public class TaskResource {
     public List<Task> getTasks() {
         return new ArrayList<>(tasks.values());
     }
+
+    @PUT 
+    @Path("/{taskId}") 
+    public Response updateTask(@PathParam("taskId") UUID taskId, TaskRequest request) { 
+        if (!tasks.containsKey(taskId)) {
+            // return 404
+            return Response.status(Response.Status.NOT_FOUND).build(); 
+        }
+
+        Task task = tasks.get(taskId);
+        task.setDescription(request.getDescription());
+
+        // return 204
+        return Response.noContent().build();
+    }
 }
