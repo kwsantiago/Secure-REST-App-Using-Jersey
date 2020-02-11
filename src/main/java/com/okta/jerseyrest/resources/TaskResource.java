@@ -22,4 +22,10 @@ public class TaskResource {
         tasks.put(taskId, new Task(taskId, request.getDescription()));
         return taskId.toString();
     }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Task> getTasks() {
+        return new ArrayList<>(tasks.values());
+    }
 }
